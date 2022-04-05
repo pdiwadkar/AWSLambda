@@ -1,10 +1,10 @@
 package main
 
 /*
-aws ID-  <7681-9119-0495>
+aws ID-  <place your Account ID>
 aws iam create-role --role-name lambda-ex --assume-role-policy-document '{"Version": "2012-10-17","Statement": [{ "Effect": "Allow", "Principal": {"Service": "lambda.amazonaws.com"}, "Action": "sts:AssumeRole"}]}'
 aws iam attach-role-policy --role-name lambda-ex --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
-aws lambda create-function --function-name goaws --zip-file fileb://main.zip --handler main --runtime go1.x --role arn:aws:iam::768191190495:role/lambda-ex
+aws lambda create-function --function-name goaws --zip-file fileb://main.zip --handler main --runtime go1.x --role arn:aws:iam::<Account ID>:role/lambda-ex
 */
 import (
 	"fmt"
